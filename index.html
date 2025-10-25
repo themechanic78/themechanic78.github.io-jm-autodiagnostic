@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JM Auto Diagnostic</title>
+  <meta name="description" content="JM Auto Diagnostic — professional automotive diagnostics and consulting.">
+  <style>
+    :root{--bg:#f8fafc;--card:#ffffff;--accent:#0ea5c9;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,color-scheme:light;color:#0f1724;background:var(--bg)}
+    .container{max-width:1100px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04202a}
+    h1{margin:0;font-size:1.25rem}
+    p.lead{color:var(--muted);margin:6px 0 0}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);border:1px solid rgba(15,23,36,0.04)}
+    .cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#012027;border-radius:8px;text-decoration:none;font-weight:600}
+    .muted{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .service{background:linear-gradient(180deg,rgba(14,165,201,0.04),transparent);padding:12px;border-radius:8px}
+    footer{margin-top:28px;color:var(--muted);font-size:0.9rem;text-align:center}
+    .input{border:1px solid #d1d5db;padding:8px;border-radius:6px;width:100%}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .hidden{display:none}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} .services{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">JM</div>
+        <div>
+          <h1>JM Auto Diagnostic</h1>
+          <p class="lead">Professional automotive diagnostics and consulting</p>
+        </div>
+      </div>
+
+      <nav class="muted" aria-label="Main navigation">
+        <a href="#services" class="muted" style="margin-right:12px;text-decoration:underline">Services</a>
+        <a href="#about" class="muted" style="margin-right:12px">About</a>
+        <a href="#contact" class="muted">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2 style="font-size:1.75rem;margin:0 0 10px">Precision diagnostics for modern vehicles</h2>
+        <p class="muted">Specialized technical analysis to identify mechanical, electrical, and electronic faults accurately. We deliver clear reports, recommended repairs and preventive advice for workshops, fleets and private owners.</p>
+
+        <div style="margin-top:16px;display:flex;gap:10px;align-items:center">
+          <a href="#contact" class="cta">Contact Us</a>
+          <a href="/jm-brochure.pdf" class="muted" style="text-decoration:underline">Download brochure (PDF)</a>
+        </div>
+
+        <div class="services" id="services">
+          <div class="service">
+            <strong>Initial Evaluation</strong>
+            <div class="muted">History review and interview to define the diagnostic strategy.</div>
+          </div>
+
+          <div class="service">
+            <strong>Electronic Diagnostics</strong>
+            <div class="muted">Professional tools for reading fault codes, live data and tests.</div>
+          </div>
+
+          <div class="service">
+            <strong>Mechanical Analysis</strong>
+            <div class="muted">Inspections and measurements to pinpoint component issues.</div>
+          </div>
+
+          <div class="service">
+            <strong>Technical Reporting</strong>
+            <div class="muted">Actionable reports with causes, repair recommendations and estimates.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Get in touch</h3>
+        <p class="muted">For consultations, quotes or remote support — email, call, or message on WhatsApp.</p>
+
+        <div style="margin-top:12px" class="muted">
+          <div><strong>Email:</strong> <a href="mailto:contact@jmautodiagnostic.com">contact@jmautodiagnostic.com</a></div>
+          <div><strong>Phone:</strong> <a href="tel:+4791281295">+4791281295</a></div>
+          <div><strong>WhatsApp:</strong> <a href="https://wa.me/4791281295" target="_blank" rel="noreferrer">Message on WhatsApp</a></div>
+        </div>
+
+        <div style="margin-top:14px">
+          <a href="mailto:contact@jmautodiagnostic.com?subject=Consultation%20Request" class="cta">Request a consultation</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="card" style="margin-top:20px">
+      <h3 style="margin-top:0">About JM Auto Diagnostic</h3>
+      <p class="muted">JM Auto Diagnostic offers specialized technical analysis for the precise identification of faults in modern vehicles. We work with workshops, fleets, dealerships, and private clients to deliver efficient, data-driven solutions for complex automotive problems.</p>
+    </section>
+
+    <!-- Contact + Questionnaire -->
+    <section id="contact" class="card" style="margin-top:16px">
+      <h3 style="margin-top:0">Contact & Questionnaire</h3>
+      <p class="muted">Reach out for a consultation, quote, or remote support. Fill the short questionnaire below to receive a tailored brochure (PDF) with recommended checks and services.</p>
+
+      <div style="margin-top:12px">
+        <form id="questionnaire" class="space-y-4" autocomplete="off">
+          <h4 style="margin:0 0 8px 0">1. Vehicle Information</h4>
+          <div class="grid-2">
+            <input class="input" name="make" placeholder="Make" />
+            <input class="input" name="model" placeholder="Model" />
+          </div>
+          <div class="grid-2" style="margin-top:8px">
+            <input class="input" name="year" placeholder="Year" />
+            <input class="input" name="engine" placeholder="Engine Type" />
+          </div>
+          <input class="input" name="vin" placeholder="VIN (optional)" style="margin-top:8px" />
+
+          <h4 style="margin:12px 0 8px 0">2. Fault / Symptoms</h4>
+          <textarea class="input" name="fault_description" rows="3" placeholder="Describe the main problem or symptom"></textarea>
+
+          <h4 style="margin:12px 0 8px 0">3. Warning lights</h4>
+          <div class="grid-2">
+            <label><input type="checkbox" name="warning_check_engine" /> Check Engine</label>
+            <label><input type="checkbox" name="warning_abs" /> ABS</label>
+            <label><input type="checkbox" name="warning_battery" /> Battery</label>
+            <label><input type="checkbox" name="warning_oil" /> Oil Pressure</label>
+          </div>
+
+          <h4 style="margin:12px 0 8px 0">4. Environment / When it occurs</h4>
+          <div class="grid-2">
+            <label><input type="checkbox" name="env_cold" /> Cold engine</label>
+            <label><input type="checkbox" name="env_warm" /> Warm engine</label>
+            <label><input type="checkbox" name="env_highspeed" /> High speed</label>
+            <label><input type="checkbox" name="env_wet" /> Wet weather</label>
+          </div>
+
+          <h4 style="margin:12px 0 8px 0">5. Contact details</h4>
+          <div class="grid-2">
+            <input class="input" name="client_name" placeholder="Your name" />
+            <input class="input" name="client_email" placeholder="Your email" />
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <button type="submit" class="cta">Submit and get brochure</button>
+            <div id="formResult" class="muted" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+
+      <div style="margin-top:14px">
+        <a id="downloadLink" href="/jm-brochure.pdf" class="cta hidden" download>Download your brochure (PDF)</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">© JM Auto Diagnostic. All rights reserved. · Built with care.</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById('questionnaire');
+      const result = document.getElementById('formResult');
+      const downloadLink = document.getElementById('downloadLink');
+
+      function collectFormData(formElem) {
+        const fd = new FormData(formElem);
+        // For checkboxes that may not be present in FormData, include them by scanning inputs
+        const inputs = Array.from(formElem.querySelectorAll('input[name], textarea[name]'));
+        const data = {};
+        inputs.forEach((el) => {
+          if (el.type === 'checkbox') {
+            data[el.name] = el.checked ? 'yes' : 'no';
+          } else {
+            data[el.name] = fd.get(el.name) || '';
+          }
+        });
+        return data;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        result.textContent = '';
+        const data = collectFormData(form);
+
+        if (!data.client_email || data.client_email.trim() === '') {
+          result.textContent = 'Please provide your email to receive the brochure.';
+          return;
+        }
+
+        // Prepare a nice summary for the email body
+        let body = 'JM Auto Diagnostic - Brochure Request\n\n';
+        Object.keys(data).forEach((k) => {
+          body += k + ': ' + (data[k] || '-') + '\n';
+        });
+
+        // Show the download link and a success message
+        downloadLink.classList.remove('hidden');
+        result.textContent = 'Thanks — a tailored brochure is ready to download below. A copy of your questionnaire has also been prepared for us to follow up.';
+
+        // Open mailto (user's email client) with the questionnaire summary
+        const subject = encodeURIComponent('JM Auto Diagnostic - Brochure Request');
+        const mailBody = encodeURIComponent(body);
+        // Use window.location.href to avoid popup blocking in many browsers
+        window.location.href = `mailto:contact@jmautodiagnostic.com?subject=${subject}&body=${mailBody}`;
+      });
+    })();
+  </script>
+</body>
+</html>
